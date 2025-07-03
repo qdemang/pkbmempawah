@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+    color: #e0e0e0;
+}
+
+.login-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.wrapper {
+    display: flex;
+}
+
+.sidebar {
+    width: 250px;
+    background: rgba(15, 52, 96, 0.6);
+    backdrop-filter: blur(10px);
+    color: white;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.sidebar h3 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+.sidebar ul li {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    color: #e0e0e0;
+    text-decoration: none;
+    display: block;
+    padding: 12px 15px;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.sidebar ul li a:hover, .sidebar ul li a.active {
+    background: #e94560;
+}
+
+.sidebar ul li a .fas {
+    width: 25px;
+    margin-right: 10px;
+}
+
+.main-content {
+    flex: 1;
+    padding: 25px;
+}
+
+.header {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    font-size: 18px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card h4 {
+    margin-bottom: 20px;
+    font-size: 18px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 10px;
+}
+
+.form-container {
+    width: 400px;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.form-container h2 {
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #ffffff;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+.form-row .form-group {
+    flex: 1;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #e94560;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+.btn-submit:hover {
+    background: #c73049;
+}
+
+.form-footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.form-footer a {
+    color: #e94560;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 15px;
+}
+
+.alert-danger {
+    background-color: rgba(233, 69, 96, 0.3);
+    color: #f8d7da;
+    border: 1px solid #e94560;
+}
+
+.alert-success {
+    background-color: rgba(40, 167, 69, 0.3);
+    color: #d4edda;
+    border: 1px solid #28a745;
+}
+
+
+/* Table Styles */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.data-table th, .data-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.data-table thead th {
+    background-color: rgba(233, 69, 96, 0.3);
+}
+
+.data-table tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.data-table img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.action-btn {
+    padding: 5px 10px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-right: 5px;
+    font-size: 12px;
+}
+.btn-edit { background: #17a2b8; }
+.btn-delete { background: #dc3545; }
+
+
+/* CSS Khusus untuk Print */
+@media print {
+    .sidebar, 
+    .header, 
+    .search-form, 
+    .kolom-aksi,
+    .btn-print,
+    .form-footer,
+    .action-btn {
+        display: none;
+    }
+
+    .wrapper {
+        display: block;
+    }
+    
+    .main-content {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    .card {
+        box-shadow: none;
+        border: none;
+        background: none;
+        backdrop-filter: none;
+        padding:0;
+        margin:0;
+    }
+
+    .data-table, .data-table th, .data-table td {
+        border: 1px solid #666;
+        color: #000;
+    }
+
+    .data-table img {
+        display: none;
+    }
+
+    a {
+        text-decoration: none;
+        color: #000;
+    }
+
+    body{
+        background: none;
+    }
+}
+
+.filter-container {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.filter-btn {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #e0e0e0;
+    text-decoration: none;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    background-color: rgba(23, 162, 184, 0.5); /* Warna hover */
+    border-color: #17a2b8;
+}
+
+.filter-btn.active {
+    background-color: #e94560; /* Warna tombol aktif */
+    border-color: #e94560;
+    font-weight: 600;
+}
